@@ -28,3 +28,12 @@ console.log(Movie);
     new Movie(8820,  "Black Sabbath (Tre volti della paura, I)", 2016, 3.8)
   ];
   console.log(movies);
+
+
+  // Q4.3 Sort the array in ascending order by Movie ID:
+  // "a" represents the first movie object being compared in each pair.
+  // "b" represents the second movie object being compared in each pair.
+  movies.sort((a, b) => a.movieId - b.movieId);
+  console.log(" ");
+  console.log("Movies sorted in ascending order by Movie ID:");
+  console.log(movies);
