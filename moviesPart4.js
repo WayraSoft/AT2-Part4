@@ -37,3 +37,38 @@ console.log(Movie);
   console.log(" ");
   console.log("Movies sorted in ascending order by Movie ID:");
   console.log(movies);
+
+
+  // Q4.4 Implement an algorithm (sequential search) to find a movie:
+  // The function accepts two parameters, the array 'movies' and a movie ID to be found.
+  function sequentialSearch(moviesArray, targetId) {
+    // local variable, init as "not found" value.
+    let index = -1;
+    for(let i = 0; i < moviesArray.length; i++) {
+      if(moviesArray[i].movieId === targetId) {
+        index = i;
+        break
+      }
+    }
+    return index;
+  }
+
+  // Example when the target is found:
+  let idSearch = 6691;
+  let indexTarget = sequentialSearch(movies, idSearch);
+  if(indexTarget >= 0) {
+    console.log(`The movie ID ${movies[indexTarget].movieId} has been found: ${movies[indexTarget].title}`);
+  }
+  else {
+    console.log(`Movie ID ${idSearch} not found!`);
+  }
+
+  // Example when the target is not found:
+  idSearch = 4578;
+  indexTarget = sequentialSearch(movies, idSearch);
+  if(indexTarget >= 0) {
+    console.log(`The movie ID ${movies[indexTarget].movieId} has been found: ${movies[indexTarget].title}`);
+  }
+  else {
+    console.log(`Movie ID ${idSearch} not found!`);
+  }
